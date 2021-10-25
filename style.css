@@ -1,0 +1,106 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background: #3772FF;
+}
+
+form {
+    border-radius: 40px;
+}
+.login {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #080708;
+    text-align: center;
+
+}
+
+h1 {
+    color:white;
+}
+
+.login input[type= "text"],
+.login input[type= "password"]
+{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #DF2935;
+    padding: 14px 10px;
+    color: white;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.login input[type= "text"]:hover,
+.login input[type= "password"]:hover
+{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #A0EB05;
+    padding: 14px 10px;
+    color: white;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.login input[type= "text"]:focus,
+.login input[type= "password"]:focus
+{
+    border:0;
+    background: #E6E8E6;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #A0EB05;
+    padding: 14px 10px;
+    color: #000;
+    width: 280px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.login input[type="submit"]
+{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #DF2935;
+    padding: 14px 10px;
+    color: white;
+    width: 100px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.login input[type="submit"]:hover
+{
+    border:0;
+    background: #A0EB05;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #A0EB05;
+    padding: 14px 10px;
+    color: #000;
+    width: 140px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
