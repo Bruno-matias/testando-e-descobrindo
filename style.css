@@ -1,27 +1,87 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-    background: #3772FF;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+
+}
+
+:root{
+    --color1:#ff0000;
+    --color2:#00a6ff;
+
+}
+
+.loding{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loding span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid var(--color1);
+    border-right: 2px solid var(--color2);
+    pointer-events: none;
+    animation: rotates 5s linear infinite;
+
+}
+
+.loding span:nth-child(1){
+    animation-duration: 2s;
+    border-radius: 40% 62% 64% 40% / 43% 40% 65% 57%;
+}
+
+.loding span:nth-child(2){
+    animation-duration: 2s;
+    animation-direction: reverse;
+    border-radius: 41% 59% 40% 60% / 65% 66% 40% 40%;
+}
+
+.loding span:nth-child(3){
+    animation-duration: 3s;
+    border-radius: 41% 59% 40% 60% / 65% 66% 40% 40%;
+}
+
+.loding span:nth-child(4){
+    animation-duration: 4s;
+    animation-direction: reverse;
+    border-radius: 40% 62% 64% 40% / 43% 40% 65% 57%;
+}
 form {
-    border-radius: 40px;
+    background: none;
 }
 .login {
     width: 300px;
-    padding: 40px;
+    padding: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #080708;
+    background: none;
     text-align: center;
+    align-items: center;
+    font-family: sans-serif;
 
 }
 
-h1 {
-    color:white;
+h2 {
+    color:white;    
+    font-family: sans-serif;
 }
 
 .login input[type= "text"],
@@ -32,7 +92,7 @@ h1 {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #DF2935;
+    border: 2px solid var(--color1);
     padding: 14px 10px;
     color: white;
     width: 200px;
@@ -48,7 +108,7 @@ h1 {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #A0EB05;
+    border: 2px solid var(--color2);
     padding: 14px 10px;
     color: white;
     width: 200px;
@@ -64,10 +124,10 @@ h1 {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #A0EB05;
+    border: 2px solid var(--color2);
     padding: 14px 10px;
     color: #000;
-    width: 280px;
+    width: 230px;
     outline: none;
     border-radius: 24px;
     transition: 0.25s;
@@ -80,27 +140,39 @@ h1 {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #DF2935;
+    border: 2px solid var(--color1);
     padding: 14px 10px;
     color: white;
     width: 100px;
     outline: none;
     border-radius: 24px;
     transition: 0.25s;
+    font-weight: bold;
 }
 .login input[type="submit"]:hover
 {
     border:0;
-    background: #A0EB05;
+    background: var(--color2);
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #A0EB05;
+    border: 2px solid var(--color2);
     padding: 14px 10px;
     color: #000;
-    width: 140px;
+    width: 120px;
     outline: none;
     border-radius: 24px;
     transition: 0.25s;
+    font-weight: bold;
+    cursor: pointer;
 
+}
+
+@keyframes rotates {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
